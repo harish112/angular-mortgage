@@ -1,0 +1,15 @@
+/* Add application styles & imports to this file! */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body {
+  background-color: #e1ebf4;
+}
+.header {
+  color: blueviolet;
+  line-height: 0.8;
+  border-bottom: 2px solid grey;
+  border-left: 2px solid grey;
+  border-right: 2px solid grey;
+}
+.card {
+  background-color: #e1ebf4;
+}

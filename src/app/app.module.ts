@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 // import Contact from '../contact/contact.component';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -16,6 +17,7 @@ const routes: Routes = [{ path: 'main', component: Calculator }];
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    NgxSliderModule,
     RouterModule.forRoot(routes),
   ],
   declarations: [AppComponent, HelloComponent, Calculator],

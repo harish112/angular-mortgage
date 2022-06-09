@@ -10,7 +10,7 @@
             >Purchase price:{{ PurchasePrice }}</label
           >
           <div class="range">
-            <input
+            <!-- <input
               type="range"
               bgThumbColor="blueviolet"
               class="form-range"
@@ -18,8 +18,9 @@
               max="1000000"
               step="1000"
               id="customRange3"
-              onclick=""
-            />
+              
+            /> -->
+            <ngx-slider [(highValue)]="highValue" [options]="options"></ngx-slider>
           </div>
         </div>
         <div class="col">

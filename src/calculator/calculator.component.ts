@@ -1,3 +1,4 @@
+import { Options } from '@angular-slider/ngx-slider/options';
 import { Component, TemplateRef } from '@angular/core';
 
 @Component({
@@ -6,6 +7,12 @@ import { Component, TemplateRef } from '@angular/core';
   styleUrls: ['./calculator.component.css'],
 })
 export default class Calculator {
+  highValue: number = 60;
+  options: Options = {
+    floor: 0,
+    ceil: 100,
+  };
+
   PurchasePrice: number = 0;
   DownPayment: number = 0;
   ROI: number = 0;

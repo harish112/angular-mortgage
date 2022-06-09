@@ -1,14 +1,28 @@
 <div class="container">
   <div class="card">
     <div class="card-header">contact details</div>
-    <form class="card-body">
+    <form class="card-body" [formGroup]="userForm">
       <tr>
         <td><label for="name" class="form-control-lg">Name:</label></td>
-        <td><input type="text" id="name" class="formControl" /></td>
+        <td>
+          <input
+            type="text"
+            formControlName="name"
+            id="name"
+            class="formControl"
+          />
+        </td>
       </tr>
       <tr>
         <td><label for="email" class="form-control-lg">Email</label></td>
-        <td><input type="email" id="email" class="formControl" /></td>
+        <td>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="formControl"
+          />
+        </td>
       </tr>
       <tr>
         <br />

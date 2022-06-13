@@ -1,5 +1,5 @@
 import { Options } from 'ng5-slider';
-import { Component, TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,7 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.css'],
 })
-export default class Calculator {
+export default class Calculator implements OnInit {
   // highValue: number = 60;
   // options: Options = {
   //   floor: 0,
@@ -41,7 +41,7 @@ export default class Calculator {
   public LoanAmount: number;
   public EstimatedAmount: number;
 
-  PurchasePrice: number = 10000;
+  PurchasePrice: number = 50000;
   options: Options = {
     floor: 0,
     ceil: 250000,
@@ -56,4 +56,16 @@ export default class Calculator {
     LoanAmount: new FormControl('', Validators.required),
     EstimatedAmount: new FormControl('', Validators.required),
   });
+  loanAmount() {
+    this.LoanAmount = this.PurchasePrice - this.DownPayment;
+  }
+  //  M = P[r(1+r)^n/((1+r)^n)-1)]
+
+  estimate() {
+    this.EstimatedAmount =
+      this.LoanAmount *
+      ((this.ROI * Math.pow(1 + this.ROI, this.time)) /
+        (Math.pow(1 + this.ROI, this.time) - 1));
+  }
+  ngOnInit() {}
 }

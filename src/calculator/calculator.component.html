@@ -11,22 +11,23 @@
               >Purchase price:{{ PurchasePrice }}</label
             >
             <div class="range">
-              <!-- <input
+              <input
                 formControlName="PurchasePrice"
                 type="range"
                 bgThumbColor="blueviolet"
                 class="form-range"
-                min="0"
+                min="50000"
+                [(ngModel)]="PurchasePrice"
                 max="1000000"
                 step="1000"
                 id="customRange3"
-              /> -->
-              <ngx-slider
+                (click)="loanAmount()"
+              />
+              <!-- <ngx-slider
                 [(value)]="PurchasePrice"
                 [options]="options"
                 formControlName="PurchasePrice"
-              ></ngx-slider>
-              <!-- <ngx-slider [(highValue)]="highValue" [options]="options"></ngx-slider> -->
+              ></ngx-slider> -->
             </div>
             <div
               class="error"
@@ -44,10 +45,12 @@
             >
             <div class="range">
               <input
+                (click)="loanAmount()"
                 formControlName="DownPayment"
                 type="range"
                 class="form-range"
                 min="0"
+                [(ngModel)]="DownPayment"
                 max="100000"
                 step="1000"
                 id="customRange3"
@@ -69,14 +72,15 @@
             </label>
             <div class="range">
               <input
+                [(ngModel)]="time"
                 formControlName="time"
                 type="range"
                 class="form-range"
                 min="0"
                 max="36"
                 step="1"
-                ng-model="time"
                 id="customRange3"
+                (click)="estimate()"
               />
             </div>
             <div
@@ -104,7 +108,8 @@
                 max="30"
                 step="0.5"
                 id="customRange3"
-                ng-model="ROI"
+                [(ngModel)]="ROI"
+                (click)="estimate()"
               />
             </div>
             <div
@@ -119,18 +124,20 @@
           <div class="col">
             Loan amount <br />
             <input
-              type="text"
+              [disabled]="true"
+              type="number"
               class="form-control-sm"
               formControlName="LoanAmount"
               value="{{ LoanAmount }}"
+              (change)="estimate()"
             />
           </div>
-          <div class="col" formControlName="EstimatedAmount">
+          <div class="col">
             Estimated pr. month <br />
             <input
-              type="text"
+              type="number"
               class="form-control-sm"
-              formControlName="LoanAmount"
+              formControlName="EstimatedAmount"
               value="{{ EstimatedAmount }}"
             />
           </div>

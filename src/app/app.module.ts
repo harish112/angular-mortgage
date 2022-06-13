@@ -8,6 +8,7 @@ import { HelloComponent } from './hello.component';
 import Calculator from '../calculator/calculator.component';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
+import { ContactComponent } from '../contact/contact.component';
 
 // import Form from '../form/form.component';
 
@@ -21,7 +22,7 @@ const routes: Routes = [{ path: 'main', component: Calculator }];
     NgxSliderModule,
     RouterModule.forRoot(routes),
   ],
-  declarations: [AppComponent, HelloComponent, Calculator],
+  declarations: [AppComponent, HelloComponent, Calculator, ContactComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

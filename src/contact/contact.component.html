@@ -1,17 +1,33 @@
 <div class="container">
   <div class="card">
     <div class="card-header">contact details</div>
-    <form class="card-body">
+    <form class="card-body" [formGroup]="form">
       <tr>
-        <td><label for="name" class="form-control-lg">Name:</label></td>
+        <td><label for="username" class="form-control-lg">Name:</label></td>
         <td>
-          <input type="text" id="name" class="formControl" />
+          <input
+            type="text"
+            id="username"
+            class="formControl"
+            formControlName="username"
+          />
+        </td>
+        <td>
+          <div class="error">contact name is required!</div>
         </td>
       </tr>
       <tr>
         <td><label for="email" class="form-control-lg">Email</label></td>
         <td>
-          <input type="email" id="email" class="formControl" />
+          <input
+            type="email"
+            id="email"
+            class="formControl"
+            formControlName="email"
+          />
+        </td>
+        <td>
+          <div class="error">contact email id is required!</div>
         </td>
       </tr>
       <tr>

@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -15,6 +20,11 @@ export class ContactComponent implements OnInit {
   //     email: ['', Validators.required],
   //   });
   // }
+  form = new FormGroup({
+    username: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+  });
+  constructor() {}
 
   ngOnInit() {}
 }

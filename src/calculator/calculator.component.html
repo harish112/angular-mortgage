@@ -8,7 +8,7 @@
         <div class="row">
           <div class="col">
             <label for="slider" class="form-label"
-              >Purchase price:{{ PurchasePrice }}</label
+              >Purchase price: {{ PurchasePrice | currency }}</label
             >
             <div class="range">
               <input
@@ -41,7 +41,7 @@
           </div>
           <div class="col">
             <label for="customRange3" class="form-label"
-              >Down payment:{{ DownPayment }}</label
+              >Down payment: {{ DownPayment | currency }}</label
             >
             <div class="range">
               <input
@@ -68,7 +68,7 @@
           </div>
           <div class="col">
             <label for="customRange3" class="form-label"
-              >Repayment time: {{ time }}
+              >Repayment time: {{ time }} years
             </label>
             <div class="range">
               <input
@@ -127,6 +127,7 @@
               [disabled]="true"
               type="number"
               class="form-control-sm"
+              style=" background-color: #e1ebf4;border:none"
               formControlName="LoanAmount"
               value="{{ LoanAmount }}"
               (change)="estimate()"
@@ -135,6 +136,7 @@
           <div class="col">
             Estimated pr. month <br />
             <input
+              style=" background-color: #e1ebf4;border:none;font-size:14px"
               type="number"
               class="form-control-sm"
               formControlName="EstimatedAmount"

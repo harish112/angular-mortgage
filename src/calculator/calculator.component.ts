@@ -35,13 +35,13 @@ export default class Calculator implements OnInit {
   //   email: new FormControl('', Validators.required),
   // });
   // public PurchasePrice: number;
-  public DownPayment: number = 10000;
-  public time: number = 12;
-  public ROI: number = 10;
+  public DownPayment: number = 54000;
+  public time: number = 3;
+  public ROI: number = 11.5;
   public LoanAmount: number;
   public EstimatedAmount: number;
 
-  PurchasePrice: number = 50000;
+  PurchasePrice: number = 164000;
   options: Options = {
     floor: 0,
     ceil: 250000,
@@ -64,8 +64,9 @@ export default class Calculator implements OnInit {
   estimate() {
     this.EstimatedAmount =
       this.LoanAmount *
-      ((this.ROI * Math.pow(1 + this.ROI, this.time)) /
-        (Math.pow(1 + this.ROI, this.time) - 1));
+      (((this.ROI / 12 / 100) *
+        Math.pow(1 + this.ROI / 12 / 100, this.time * 12)) /
+        (Math.pow(1 + this.ROI / 12 / 100, this.time * 12) - 1));
   }
   ngOnInit() {}
 }

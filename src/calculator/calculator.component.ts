@@ -41,13 +41,11 @@ export default class Calculator {
   public LoanAmount: number;
   public EstimatedAmount: number;
 
-  minValue: number = 20;
-  maxValue: number = 80;
+  value: number = 0;
   options: Options = {
     floor: 0,
-    ceil: 100,
-    step: 10,
-    showTicks: true,
+    ceil: 250000,
+    step: 500,
   };
 
   calculator = new FormGroup({

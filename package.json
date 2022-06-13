@@ -24,6 +24,8 @@
     "angular": "^1.8.3",
     "angular-slider/ngx-slider": "*",
     "bootstrap": "^5.1.3",
+    "core-js": "^3.22.8",
+    "ng5-slider": "^1.2.6",
     "ngx": "^2.4.0",
     "rxjs": "7.5.5",
     "slider": "^1.0.4",

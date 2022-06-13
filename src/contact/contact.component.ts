@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -20,6 +20,8 @@ export class ContactComponent implements OnInit {
   //     email: ['', Validators.required],
   //   });
   // }
+  // public username: string;
+  // public email: string;
   form = new FormGroup({
     username: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),

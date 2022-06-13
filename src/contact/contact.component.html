@@ -13,7 +13,12 @@
           />
         </td>
         <td>
-          <div class="error">contact name is required!</div>
+          <div
+            class="error"
+            *ngIf="form.get('username').invalid && form.get('username').touched"
+          >
+            contact name is required!
+          </div>
         </td>
       </tr>
       <tr>
@@ -27,7 +32,12 @@
           />
         </td>
         <td>
-          <div class="error">contact email id is required!</div>
+          <div
+            class="error"
+            *ngIf="form.get('email').invalid && form.get('email').touched"
+          >
+            contact email id is required!
+          </div>
         </td>
       </tr>
       <tr>

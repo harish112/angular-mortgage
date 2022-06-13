@@ -34,7 +34,7 @@ export default class Calculator {
   //   username: new FormControl('', Validators.required),
   //   email: new FormControl('', Validators.required),
   // });
-  public PurchasePrice: number = 100000;
+  public PurchasePrice: number;
   public DownPayment: number = 10000;
   public time: number = 12;
   public ROI: number = 10;

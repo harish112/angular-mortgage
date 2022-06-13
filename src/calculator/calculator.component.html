@@ -7,7 +7,7 @@
       <form action="" [formGroup]="calculator">
         <div class="row">
           <div class="col">
-            <label for="customRange3" class="form-label"
+            <label for="slider" class="form-label"
               >Purchase price:{{ PurchasePrice }}</label
             >
             <div class="range">
@@ -24,7 +24,7 @@
               <ngx-slider
                 [(value)]="PurchasePrice"
                 [options]="options"
-                formControlName="Purchase"
+                formControlName="PurchasePrice"
               ></ngx-slider>
               <!-- <ngx-slider [(highValue)]="highValue" [options]="options"></ngx-slider> -->
             </div>

@@ -17,6 +17,7 @@ const routes: Routes = [{ path: 'main', component: Calculator }];
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     NgxSliderModule,
     RouterModule.forRoot(routes),
   ],

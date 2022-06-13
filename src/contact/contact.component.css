@@ -1,3 +1,7 @@
 .error {
   background-color: yellow;
 }
+.card {
+  height: auto;
+  border: 4px solid white;
+}

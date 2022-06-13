@@ -1,4 +1,4 @@
-import { Options } from '@angular-slider/ngx-slider/options';
+import { Options } from 'ng5-slider';
 import { Component, TemplateRef } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -34,14 +34,14 @@ export default class Calculator {
   //   username: new FormControl('', Validators.required),
   //   email: new FormControl('', Validators.required),
   // });
-  public PurchasePrice: number;
+  // public PurchasePrice: number;
   public DownPayment: number = 10000;
   public time: number = 12;
   public ROI: number = 10;
   public LoanAmount: number;
   public EstimatedAmount: number;
 
-  value: number = 0;
+  PurchasePrice: number = 10000;
   options: Options = {
     floor: 0,
     ceil: 250000,

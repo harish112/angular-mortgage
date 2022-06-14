@@ -144,8 +144,8 @@
               type="number"
               class="form-control-sm"
               formControlName="EstimatedAmount"
-              value="{{ EstimatedAmount }}"
             />
+            <!-- value="{{ EstimatedAmount }}" -->
           </div>
         </div>
         <br />
@@ -166,7 +166,7 @@
               type="button"
               style="background-color:blueviolet;color:white"
               class="btn"
-              data-bs-toggle="modal"
+              data-bs-toggle=""
               data-bs-target="#exampleModal"
             >
               Get a mortgage quote
@@ -196,6 +196,7 @@
                   <div class="modal-body" style="background-color:#e1ebf4">
                     <app-contact></app-contact>
                   </div>
+                  <div class="modal-footer"></div>
                   <!-- <div class="modal-footer">
                     <button
                       type="button"
@@ -217,5 +218,25 @@
     </div>
   </div>
   <br />
+</div>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Loan Amount</td>
+        <td>Repayment Time</td>
+        <td>Interest Rate</td>
+        <td>Estimated Amount (per month)</td>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+    
+    </tr>
+    </tbody>
+  </table>
 </div>
 <router-outlet></router-outlet>

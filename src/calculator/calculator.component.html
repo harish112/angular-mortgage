@@ -144,8 +144,9 @@
               type="number"
               class="form-control-sm"
               formControlName="EstimatedAmount"
+              value="{{ EstimatedAmount }}"
             />
-            <!-- value="{{ EstimatedAmount }}" -->
+            <!--  -->
           </div>
         </div>
         <br />
@@ -166,8 +167,9 @@
               type="button"
               style="background-color:blueviolet;color:white"
               class="btn"
-              data-bs-toggle=""
+              data-bs-toggle="modal"
               data-bs-target="#exampleModal"
+              (click)="addquote()"
             >
               Get a mortgage quote
             </button>
@@ -226,6 +228,8 @@
       <tr>
         <td>Name</td>
         <td>Email</td>
+        <td>Purchase Price</td>
+        <td>Down Payment</td>
         <td>Loan Amount</td>
         <td>Repayment Time</td>
         <td>Interest Rate</td>
@@ -233,9 +237,32 @@
       </tr>
     </thead>
     <tbody>
-    <tr>
-    
-    </tr>
+      <tr *ngFor="let item of listData">
+        <td>
+          <span>{{ item.name }}</span>
+        </td>
+        <td>
+          <span>{{ item.email }}</span>
+        </td>
+        <td>
+          <span>{{ item.PurchasePrice }}</span>
+        </td>
+        <td>
+          <span>{{ item.DownPayment }}</span>
+        </td>
+        <td>
+          <span>{{ LoanAmount }}</span>
+        </td>
+        <td>
+          <span>{{ item.time }}</span>
+        </td>
+        <td>
+          <span>{{ item.ROI }}</span>
+        </td>
+        <td>
+          <span>{{ EstimatedAmount }}</span>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>

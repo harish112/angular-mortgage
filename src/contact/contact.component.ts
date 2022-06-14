@@ -22,11 +22,18 @@ export class ContactComponent implements OnInit {
   // }
   // public username: string;
   // public email: string;
+  public listData = [];
   form = new FormGroup({
     username: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
   });
-  constructor() {}
+  constructor() {
+    this.listData = [];
+  }
+  public addquote(): void {
+    this.listData.push(this.form.value);
+    this.form.reset();
+  }
 
   ngOnInit() {}
 }

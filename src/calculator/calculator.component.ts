@@ -1,6 +1,7 @@
 import { Options } from 'ng5-slider';
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+// import { form } from '../contact/contact.component';
 
 @Component({
   selector: 'calculator',
@@ -8,11 +9,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./calculator.component.css'],
 })
 export default class Calculator implements OnInit {
+  listData: any;
+
   public DownPayment: number = 54000;
   public time: number = 3;
   public ROI: number = 11.5;
-  public LoanAmount: number;
-  public EstimatedAmount: number;
+  public LoanAmount: any = [];
+  public EstimatedAmount: any = [];
   public PurchasePrice: number = 164000;
 
   calculator = new FormGroup({
@@ -34,6 +37,17 @@ export default class Calculator implements OnInit {
       (((this.ROI / 12 / 100) *
         Math.pow(1 + this.ROI / 12 / 100, this.time * 12)) /
         (Math.pow(1 + this.ROI / 12 / 100, this.time * 12) - 1));
+  }
+  constructor() {
+    this.listData = [];
+  }
+  public addquote(): void {
+    this.listData.push(this.calculator.value);
+
+    this.calculator.reset();
+  }
+  reset() {
+    this.calculator.reset();
   }
 
   ngOnInit() {}

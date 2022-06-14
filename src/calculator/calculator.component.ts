@@ -1,4 +1,3 @@
-import { Options } from 'ng5-slider';
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 // import { form } from '../contact/contact.component';

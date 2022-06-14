@@ -151,7 +151,7 @@
         <br />
         <div class="row">
           <div class="col">
-            <button
+            <!-- <button
               class="btn"
               style="background-color:blueviolet;color:white"
               routerLink="/contact"
@@ -159,7 +159,58 @@
               ariaCurrentWhenActive="page"
             >
               Get a mortgage quote
+            </button> -->
+
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              style="background-color:blueviolet;color:white"
+              class="btn"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Get a mortgage quote
             </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" style="background-color:#e1ebf4">
+                <div class="modal-content" style="background-color:#e1ebf4">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Get a mortgage quote
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body" style="background-color:#e1ebf4">
+                    <app-contact></app-contact>
+                  </div>
+                  <!-- <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Save changes
+                    </button>
+                  </div> -->
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </form>

@@ -11,24 +11,26 @@
               >Purchase price: {{ PurchasePrice | currency }}</label
             >
             <div class="range">
-              <input
-                formControlName="PurchasePrice"
-                type="range"
-                (change)="estimate()"
-                bgThumbColor="blueviolet"
-                class="form-range "
-                min="50000"
-                [(ngModel)]="PurchasePrice"
-                max="1000000"
-                step="1000"
-                id="customRange3"
-                (click)="loanAmount()"
-              />
-              <!-- <ngx-slider
+              <div class="form-group range__slider">
+                <input
+                  formControlName="PurchasePrice"
+                  type="range"
+                  (change)="estimate()"
+                  bgThumbColor="blueviolet"
+                  class="form-range"
+                  min="50000"
+                  [(ngModel)]="PurchasePrice"
+                  max="1000000"
+                  step="1000"
+                  id="customRange3"
+                  (click)="loanAmount()"
+                />
+                <!-- <ngx-slider
                 [(value)]="PurchasePrice"
                 [options]="options"
                 formControlName="PurchasePrice"
               ></ngx-slider> -->
+              </div>
             </div>
             <div
               class="error"
@@ -44,7 +46,7 @@
             <label for="customRange3" class="form-label"
               >Down payment: {{ DownPayment | currency }}</label
             >
-            <div class="range">
+            <div class="form-group range__slider">
               <input
                 (change)="estimate()"
                 (click)="loanAmount()"
@@ -72,7 +74,7 @@
             <label for="customRange3" class="form-label"
               >Repayment time: {{ time }} years
             </label>
-            <div class="range">
+            <div class="form-group range__slider">
               <input
                 [(ngModel)]="time"
                 formControlName="time"
@@ -101,7 +103,7 @@
             <label for="customRange3" class="form-label"
               >Interest rate {{ ROI }}%</label
             >
-            <div class="range">
+            <div class="form-group range__slider">
               <input
                 formControlName="ROI"
                 type="range"
@@ -126,10 +128,10 @@
           <div class="col">
             Loan amount <br />
             <input
-              [disabled]="true"
               type="number"
               class="form-control-sm"
-              style=" background-color: #e1ebf4;border:none"
+              style=" background-color:
+            #e1ebf4;border:none;font-size:16px;font-weight:bold"
               formControlName="LoanAmount"
               value="{{ LoanAmount }}"
               (change)="estimate()"
@@ -138,7 +140,7 @@
           <div class="col">
             Estimated pr. month <br />
             <input
-              style=" background-color: #e1ebf4;border:none;font-size:14px"
+              style=" background-color: #e1ebf4;border:none;font-size:16px;font-weight:bold"
               type="number"
               class="form-control-sm"
               formControlName="EstimatedAmount"
